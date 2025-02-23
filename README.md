@@ -134,3 +134,20 @@ d_ff = d_model * 4  # 4*d_model, FeedForward dimension
 d_k = d_v = 64  # dimension of K(=Q), V
 n_segments = 2
 batch_size = 32
+
+
+---
+### Web application can be accessed locally:  
+To deploy application first download repo from github (https://github.com/sachinmalego/NLP-A4-Do-you-agree.git).   
+Open in VSCode and open terminal.  
+In the terminal type "python3 app.py". My local deployment address was "http://127.0.0.1:5000/" however your's might be different.  
+Go to browser and enter your local deployment server address to test the application. 
+
+Video of Working application:  
+Link to video: https://drive.google.com/file/d/1X4pOMNefoT4ic3z-tcPTREKUicmEEdEO/view?usp=sharing
+
+![Fig 4. Video](./screenshots/A4Doyouagree.gif)
+
+Screen shots of the working application is attached here with: 
+
+![Fig 5. Screenshot2](./screenshots/Screenshot2.png)
