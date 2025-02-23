@@ -1,8 +1,6 @@
 # NLP-A4-Do-you-agree
 BERT and SBERT
 
-## **Task 3:** Evaluation and Analysis (1 points)
-
 #### 1) Provide the performance metrics based on the SNLI or MNLI datasets for the Natural Language Inference (NLI) task.
 
 Below is the training loss of BERT and S-BERT models
