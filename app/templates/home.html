@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Do You Agree</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <header>
+        <div class="logo">
+            <h1><b>A4: Do You Agree</b></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="query_box">
+        <h3 class="web_title">Do You Agree</h3>
+        <br>
+        <form action="/" method="POST">
+            <label for="Prompt A">Premise:</label>
+            <div class="prompt_inner">
+                <input type="text" name="prompt_a" id="fill_in" value="{{ request.form.prompt_a if request.method == 'POST' else prompt_a }}" required="required">
+            </div>
+            <br/>
+            <label for="Prompt B">Hypothesis:</label>
+            <div class="prompt_inner">
+                <input type="text" name="prompt_b" id="fill_in" value="{{ request.form.prompt_b if request.method == 'POST' else prompt_b }}" required="required">
+            </div>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
+
+    {% if output %}
+        <div class="output">
+            <h3>Prediction Result 
+                <span class="tooltip">(?)</span>
+              </h3>
+            <h4>Cosine Similarity: {{ output }}</h4>
+            <h4>Label: {{ label }}</h4>
+        </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}
